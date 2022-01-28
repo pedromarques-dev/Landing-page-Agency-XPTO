@@ -1,0 +1,247 @@
+/* Logo  */
+.logo{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.logo .image{
+    width: 100px;
+}
+
+.logo .title {
+    margin-left: 7px;
+    font-size: 17px;
+    transition: 0.3s ease-in-out;
+    font-weight: 800;
+}
+
+.logo .title:hover {
+    color: #1ED760;
+}
+
+
+/* Header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
+
+
+.header .navegation .menu{
+    display: flex;
+}
+
+
+.header .navegation .menu .item{
+    margin: 10px;
+}
+
+.header .navegation .menu .item a{
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+    border-radius: 30px;
+}
+
+.header .navegation .menu .item a:hover{
+    background-color: #1ED760;
+    color: white;
+}
+
+/* Panel */
+
+.content-main .panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+.content-main .panels .image-panel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.content-main .panels .image-panel.show {
+    opacity: 1;
+}
+
+.content-main .panels .project1{
+    background-image: url('../images/painel1.jpg');
+}
+
+.content-main .panels .project2{
+    background-image: url('../images/painel2.jpg');
+}
+
+.content-main .panels .project3{
+    background-image: url('../images/painel3.jpg');
+}
+
+.content-main .panels .title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.content-main .panels .arrow{
+    background: url('../images/seta.png') center center no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+.content-main .panels .arrow.previous{
+    left: 20px;   
+    transform: rotateY(180deg);
+}
+
+.content-main .panels .arrow.next{
+    right: 20px;   
+}
+
+/* About */
+
+.about {
+    background-color: #2941ab;
+}
+
+.about .content {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.about .content .info{
+    width: 40%;
+}
+
+.about .content .image{
+    width: 60%;
+}
+
+.about .content .info .title{
+    font-size: 50px;
+    color: #1ED760;
+    margin-bottom: 20px;
+}
+
+.about .content .info .text {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* footer */
+
+.contact {
+    padding: 80px 0 20px;
+}
+
+.contact .navegation{
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact .navegation .socialMedias {
+    display: flex;
+}
+
+.contact .navegation .socialMedias a{
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    font-size: 30px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    padding: 15px;
+    width: 65px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact .navegation .socialMedias a:hover{
+    background-color: #1ED760;
+}
+
+.contact .copyright{
+    margin-top: 70px;
+    text-align: center;
+}
+
+/* Media query */
+
+@media (max-width: 1200px){
+    .about .content{
+        flex-direction: column;
+        text-align: center;
+        padding: 100px 20px;
+    }
+
+    .about .content .image{
+        display: none;
+    }
+
+    .about .content .info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 940px){
+    .content-main .panels{
+        height: 500px;
+    }
+
+    .contact .navegation{
+        justify-content: center;
+    }
+
+    .contact .navegation .logo{
+        margin-bottom: 30px;
+    }
+
+    .contact .navegation .logo,
+    .contact .navegation .socialMedias{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 624px){
+    .header {
+        justify-content: center;
+    }
+
+    .header .logo{
+        margin-bottom: 30px;
+    }
+
+    .header .menu .item a {
+        font-size: calc(0.6em + 1vw);
+    }
+}
